@@ -303,6 +303,7 @@ antpart.Transparency = 1
 antpart.CanCollide = false
 
 -- Конфиг
+print("306")
 
 getgenv().jeq = {
     rares = {}, -- Список редких предметов
@@ -641,7 +642,7 @@ function gethiveballoon()
     end
     return result
 end
-
+print("645")
 -- Функция для конвертации меда
 function converthoney()
     task.wait(0)
@@ -844,7 +845,7 @@ function makequests()
         end 
     end
 end
-
+print("848")
 -- Настройки для выполнения квестов
 getgenv().Tvk1 = {true,"💖"}
 
@@ -1026,7 +1027,7 @@ information:CreateToggle("Панель статуса", true, function(bool)
         end
     end
 end)
-
+print("1030")
 local farmo = farmtab:CreateSection("Ферма")
 local fielddropdown = farmo:CreateDropdown("Поле", fieldstable, function(String) jeq.vars.field = String end)
 fielddropdown:SetOption(fieldstable[1])
@@ -1140,7 +1141,7 @@ if string.find(string.upper(identifyexecutor()), "SYN") or string.find(string.up
         end
         chat(alertText, nil, alertDesign)
     end
-    
+    print("1144")
     visu:CreateButton("Создать кокос",function()
         syn.secure_call(function() 
             require(game.ReplicatedStorage.LocalFX.FallingCoconut)({
@@ -1335,7 +1336,7 @@ function ОблакоПыли()
         Pos = nukePosition;
     })
 end
-
+print("1339")
 visu:CreateButton("Спавн Ядерной Бомбы",function() 
     alertText = "☢️ Приближается ядерный удар! ☢️"
     syn.secure_call(pushAlert, spoof)
@@ -1773,7 +1774,7 @@ task.spawn(function()
         end
     end
 end)
-
+print("1777")
 task.spawn(function() 
     while task.wait() do
         if jeq.toggles.killwindy and temptable.detected.windy and not temptable.converting and not temptable.started.vicious and not temptable.started.mondo and not temptable.started.monsters then
@@ -2239,7 +2240,7 @@ task.spawn(function()
         end
     end
 end)
-
+print("2245")
 -- Обновляем текстовую метку "Loaded Loops"
 loadingLoops:UpdateText("Loaded Loops")
 
@@ -2454,4 +2455,4 @@ task.spawn(function()
         end
     end)
 end)
-
+print("2458")
