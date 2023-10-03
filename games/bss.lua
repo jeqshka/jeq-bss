@@ -1094,13 +1094,6 @@ mobkill:CreateToggle("Убивать Ветряного", nil, function(State) j
 mobkill:CreateToggle("Автоубийство Мобов", nil, function(State) jeq.toggles.autokillmobs = State end):AddToolTip("Убивает мобов после конвертации определенного количества пыльцы")
 mobkill:CreateToggle("Избегать Мобов", nil, function(State) jeq.toggles.avoidmobs = State end)
 mobkill:CreateToggle("Авто Муравья", nil, function(State) jeq.toggles.autoant = State end):AddToolTip("Вам нужны Спарк-штучки 😋; Идет на испытание муравьев после конвертации пыльцы")
-
-local serverhopkill = combtab:CreateSection("Бой с переходом между серверами")
-serverhopkill:CreateButton("Серверхоппер Злых Пчел [⚠️][📜]",function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxking776/jeq/main/functions/viciousbeeserverhop.lua"))() end):AddToolTip("Переходит между серверами для охоты на разъяренных злых пчел")
-serverhopkill:CreateLabel("")
-serverhopkill:CreateLabel("[⚠️] Эти функции выгружают интерфейс")
-serverhopkill:CreateLabel("")
-
 local amks = combtab:CreateSection("Настройки Автоубийства Мобов")
 amks:CreateTextBox('Убивать Мобов После x Конвертаций', 'по умолчанию = 3', true, function(Value) jeq.vars.monstertimer = tonumber(Value) end)
 
